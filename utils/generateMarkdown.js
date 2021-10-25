@@ -1,6 +1,7 @@
+// function generate README.md file
 function generateMarkdown(data) {
     return `
-## Project Name: ${data.projecttitle}
+# Project Name: ${data.projecttitle}
 
 ## Description:
 ${data.description}
@@ -10,6 +11,9 @@ ${data.description}
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contribution](#contribution)
+- [Credits](#credits)
+- [Licence](#licence)
+- [Badges](#badges)
 - [Test Instructions](#test-instructions)
 - [Contact Information](#contact-information)
 
@@ -31,16 +35,20 @@ ${data.credits}
 ## Badges:
 <a href="https://img.shields.io/badge/Badges-${data.badges}-orange"><img src="https://img.shields.io/badge/Badges-${data.badges}-orange"></a>
 
-## Test-Instructions:
+## Test Instructions:
 ${data.tests}
 
-## Contact-Information:
+## Contact Information:
 
-[Github Profile](https://github.com/${data.username})
+Github: [Github Profile](https://github.com/${data.username})
 
 Email: ${data.email}
 
 <p align ="right"><a href="#">↥ back to top</a></p>
+
+- - -
+
+© 2021 ${data.usage}: ${data.projecttitle}
     `;
 }
 module.exports = generateMarkdown;

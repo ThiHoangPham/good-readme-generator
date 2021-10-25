@@ -1,8 +1,9 @@
+
 const inquirer = require("inquirer");
 const fs = require("fs");
 const fileName = 'README.md'
 var generateMarkdown = require("./utils/generateMarkdown");
-// function to initialize program
+// function questions to get sections informations
 const questions = [
     {
         type: "input",
@@ -22,7 +23,12 @@ const questions = [
     {
         type: "input",
         name: "usage",
-        message: "Enter Your Github Username Instructions:",
+        message: "Enter Your Github Username:",
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Enter Your Email:",
     },
     {
         type: "input",
@@ -32,7 +38,7 @@ const questions = [
     {
         type: "checkbox",
         name: "license",
-        message: "Chose Your Projects Licensing Options:",
+        message: "Choose Your Projects Licensing Options:",
         choices: [
             "MIT",
             "APACHE 2.0",
@@ -44,7 +50,7 @@ const questions = [
     {
         type: "checkbox",
         name: "badges",
-        message: "Chose Your Projects Badge:",
+        message: "Choose Your Projects Badge:",
         choices: [
             "HTML",
             "CSS",
@@ -71,9 +77,7 @@ const questions = [
 ]
 // function to write README file
 function writeToFile(fileName, data) {
-    // Create Markdown from data
     const markdown = generateMarkdown(data);
-    // Write Markdown file
     fs.writeFile(fileName, markdown, function (err) {
         if (err) throw err;
         console.log("Success!");
@@ -82,13 +86,10 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
-    // inquirer module
     inquirer
         .prompt(questions)
         .then(function (data) {
             writeToFile(fileName, data)
         })
 }
-
-// function call to initialize program
 init();
