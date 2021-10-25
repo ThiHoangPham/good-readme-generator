@@ -1,0 +1,26 @@
+{
+  "name": "good-readme-generator-adam-homework9",
+  "version": "1.0.0",
+  "description": "Good Readme Generator (Homework9 )",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThiHoangPham/good-readme-generator-adam-homework9.git"
+  },
+  "author": "Adam Pham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThiHoangPham/good-readme-generator-adam-homework9/issues"
+  },
+  "homepage": "https://github.com/ThiHoangPham/good-readme-generator-adam-homework9#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
