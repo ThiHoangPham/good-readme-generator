@@ -63,7 +63,7 @@ ThiHoangPham
 <a href="https://img.shields.io/badge/Badges-JavaScipt,Node JS-orange"><img src="https://img.shields.io/badge/Badges-JavaScipt,Node JS-orange"></a>
 
 ## Test Instructions:
-`node inde.js`
+`node index.js`
 
 ## Contact Information:
 
